@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LifeHelper</string>
+    <string name="action_settings">Settings</string>
+    <string name="space_string"></string>
+    <string name="calendar">Calendar</string>
+    <string name="tasks">Tasks</string>
+    <string name="coasts">Coasts</string>
+    <string name="lists">Lists</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_tasks">TasksActivity</string>
+    <string name="title_activity_coasts">CoastsActivity</string>
+    <string name="title_activity_lists">ListsActivity</string>
+
+</resources>
