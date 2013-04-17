@@ -8,44 +8,35 @@ public class Task {
 	private String tBody;
 	private boolean tAlarm = false;
 	
-	public Task (String body){
-		this.tBody = body;
-	}
-	
-	public Task (Date date, String body){
-		this.tDate = date;
-		this.tBody = body;
-	}
-	
-	public Task (String title, String body){
-		this.tTitle = title;
-		this.tBody = body;
-	}
-	
-	public Task (Date date, String title, String body){
-		this.tDate = date;
-		this.tTitle = title;
-		this.tBody = body;
-	}
-	
-	public Task (Date date, String title, String body, boolean alarmed){
-		this.tDate = date;
-		this.tTitle = title;
-		this.tBody = body;
-		this.tAlarm = true;
-	}
-	
-	public void editDate (Date date){
+	public void setDate (Date date){
 		this.tDate = date;
 	}
 	
-	public void editTitle (String title){
+	public void setTitle (String title){
 		this.tTitle = title;
 	}
 	
-	public void editBody(String body){
+	public void setBody(String body){
 		this.tBody = body;
 	}
 	
+	public void setAlarm(boolean alarm){
+		this.tAlarm = alarm;
+	}
 	
+	public String getTitle(){
+		return this.tTitle;
+	}
+	
+	public String getBody(){
+		return this.tBody;
+	}
+	
+	public Date getDate(){
+		return this.tDate;
+	}
+	
+	public boolean isAlarmed(){
+		return this.tAlarm;
+	}
 }

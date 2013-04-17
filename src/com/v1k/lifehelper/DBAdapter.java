@@ -3,6 +3,7 @@ package com.v1k.lifehelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 
 
@@ -53,15 +54,22 @@ public class DBAdapter extends SQLiteOpenHelper{
 	}
 	
 	@Override
-	public void onCreate(SQLiteDatabase arg0) {
-		// TODO Auto-generated method stub
+	public void onCreate(SQLiteDatabase db) {
+		db.execSQL(CREATE_TABLE_TASKS);
+		db.execSQL(CREATE_TABLE_LISTS);
+		db.execSQL(CREATE_TABLE_COASTS);
 		
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
+		Log.w(DBAdapter.class.getName(),
+		        "Upgrading database from version " + oldVersion + " to "
+		            + newVersion + ", which will destroy all old data");
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_TASKS);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_LISTS);
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_COASTS);
+		onCreate(db);
 		
 	}
-
 }
