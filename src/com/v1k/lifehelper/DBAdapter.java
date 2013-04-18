@@ -58,7 +58,6 @@ public class DBAdapter extends SQLiteOpenHelper{
 		db.execSQL(CREATE_TABLE_TASKS);
 		db.execSQL(CREATE_TABLE_LISTS);
 		db.execSQL(CREATE_TABLE_COASTS);
-		
 	}
 
 	@Override
