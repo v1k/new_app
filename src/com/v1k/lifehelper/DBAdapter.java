@@ -46,7 +46,7 @@ public class DBAdapter extends SQLiteOpenHelper{
 			+ TABLE_COASTS + "(" + COL_ID
 			+ " integer primary key autoincrement, " + COL_COAST_NAME
 			+ " text not null," + COL_COAST_COAST
-			+ " text not null," + COL_COAST_DATE
+			+ " double not null," + COL_COAST_DATE
 			+ " text not null);";
 	
 	public DBAdapter(Context context){

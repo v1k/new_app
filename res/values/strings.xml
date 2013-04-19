@@ -13,5 +13,6 @@
     <string name="title_activity_tasks">TasksActivity</string>
     <string name="title_activity_coasts">CoastsActivity</string>
     <string name="title_activity_lists">ListsActivity</string>
+    <string name="hello">Hello</string>
 
 </resources>

@@ -11,7 +11,7 @@ public class Task {
 	private SimpleDateFormat iso8601Format;
 	private String tTitle;
 	private String tBody;
-	private int[] tWeekDays;
+	private int[] tWeekDays = {0, 0, 0, 0, 0, 0, 0};
 	private boolean tAlarm = false;
 	
 	public Task(){
@@ -43,8 +43,11 @@ public class Task {
 	}
 	
 	public void setWeekDays(String weekdays_str){
-		int [] weekdays;
-		weekdays = Integer.valueOf(weekdays_str.split(";"));
+		int [] weekdays = {};
+		String [] wkd;
+		wkd = weekdays_str.split(";");
+		for (int i = 0; i < wkd.length; i++)
+			weekdays[i] = Integer.valueOf(i);
 		this.tWeekDays = weekdays;
 	}
 	
