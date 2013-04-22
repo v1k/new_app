@@ -1,6 +1,5 @@
 package com.v1k.lifehelper;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;

@@ -20,5 +20,10 @@ public class MyList {
 	public void setTitle(String title){
 		this.lTitle = title;
 	}
+	
+	@Override
+	  public String toString() {
+	    return this.lTitle;
+	  }
 
 }

@@ -65,5 +65,4 @@ public class ListsActivity extends ListActivity {
 	    datasource.close();
 	    super.onPause();
 	  }
-
 }

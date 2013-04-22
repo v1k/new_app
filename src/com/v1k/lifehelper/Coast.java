@@ -9,8 +9,10 @@ public class Coast {
 	private long cId;
 	private String cName;
 	private float cCoast;
+	private String cCategory;
 	private Date cDate;
 	private SimpleDateFormat dateFormat;
+	private String cShop;
 	
 	public Coast(){
 		dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
@@ -28,12 +30,20 @@ public class Coast {
 		return this.cCoast;
 	}
 	
+	public String getCat(){
+		return this.cCategory;
+	}
+	
 	public Date getDate(){
 		return this.cDate;
 	}
 	
 	public String getDateInString(){
 		return dateFormat.format(this.cDate);
+	}
+	
+	public String getShop(){
+		return this.cShop;
 	}
 	
 	public void setId(long id){
@@ -48,12 +58,20 @@ public class Coast {
 		this.cCoast = coast;
 	}
 	
+	public void setCategory(String cat){
+		this.cCategory = cat;
+	}
+	
 	public void setDate(Date date){
 		this.cDate = date;
 	}
 	
 	public void setDate (String date_str){
 		this.cDate = parseDateFromString(date_str);
+	}
+	
+	public void setShop(String shop){
+		this.cShop = shop;
 	}
 	
 	private Date parseDateFromString(String str){
